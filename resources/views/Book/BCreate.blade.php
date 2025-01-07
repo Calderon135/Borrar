@@ -22,15 +22,7 @@
                         @enderror
                     </div>
 
-                    <div class="mb-3">
-                        <label for="autor" class="form-label"><b>AUTOR:</b></label>
-                        <input type="text" class="form-control @error('autor') is-invalid @enderror" 
-                               name="autor" id="autor" placeholder="Ingrese el Autor" 
-                               value="{{ old('autor') }}">
-                        @error('autor')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
+
 
                     <div class="mb-3">
                         <label for="descripcion" class="form-label"><b>DESCRIPCION:</b></label>
