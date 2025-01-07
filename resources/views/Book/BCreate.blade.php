@@ -14,7 +14,12 @@
 
                     <div class="mb-3">
                         <label for="titulo" class="form-label"><b>TITULO:</b></label>
-                
+                        <input type="text" class="form-control @error('titulo') is-invalid @enderror" 
+                               name="titulo" id="titulo" placeholder="Ingrese el Titulo" 
+                               value="{{ old('titulo') }}">
+                        @error('titulo')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="mb-3">
