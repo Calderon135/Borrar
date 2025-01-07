@@ -17,7 +17,6 @@ class BookController extends Controller
         $books = Book::with('user')
                     ->where('titulo', 'LIKE', '%'.$BookBuscar.'%')
                     ->orwhere('autor', 'LIKE', '%'.$BookBuscar.'%')
-                    ->orwhere('precio', 'LIKE', '%'.$BookBuscar.'%')
                     ->paginate(9);
 
         return view ('Book.BIndex', compact('books','BookBuscar'));
