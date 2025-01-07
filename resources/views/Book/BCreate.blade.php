@@ -42,19 +42,6 @@
                         @enderror
                     </div>
 
-                    <div class="mb-3">
-                        <label for="precio" class="form-label"><b>PRECIO:</b></label>
-                        <input type="number" class="form-control @error('precio') is-invalid @enderror" 
-                               name="precio" id="precio" placeholder="Ingrese el Precio" 
-                               value="{{ old('precio') }}">
-                        @error('precio')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="hidden" name="user_id" value="{{ auth()->id() }}">
-                    </div>
 
                     <div class="mb-3">
                         <label for="estado" class="form-label"><b>ESTADO:</b></label>
