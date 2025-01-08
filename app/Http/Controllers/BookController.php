@@ -33,9 +33,6 @@ class BookController extends Controller
 
         $request->validate([
             'titulo'=>'required|regex:/[A-Z][a-z]+/i',
-            'autor'=>'required|regex:/[A-Z][a-z]+/i',
-            'descripcion'=>'required|regex:/[A-Z][a-z]+/i',
-            'precio'=>'required|numeric',
             'estado'=>'required',
         ]);
         

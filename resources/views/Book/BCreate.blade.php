@@ -22,15 +22,7 @@
                         @enderror
                     </div>
 
-                    <div class="mb-3">
-                        <label for="autor" class="form-label"><b>AUTOR:</b></label>
-                        <input type="text" class="form-control @error('autor') is-invalid @enderror" 
-                               name="autor" id="autor" placeholder="Ingrese el Autor" 
-                               value="{{ old('autor') }}">
-                        @error('autor')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
+
 
                     <div class="mb-3">
                         <label for="descripcion" class="form-label"><b>DESCRIPCION:</b></label>
@@ -42,19 +34,6 @@
                         @enderror
                     </div>
 
-                    <div class="mb-3">
-                        <label for="precio" class="form-label"><b>PRECIO:</b></label>
-                        <input type="number" class="form-control @error('precio') is-invalid @enderror" 
-                               name="precio" id="precio" placeholder="Ingrese el Precio" 
-                               value="{{ old('precio') }}">
-                        @error('precio')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="hidden" name="user_id" value="{{ auth()->id() }}">
-                    </div>
 
                     <div class="mb-3">
                         <label for="estado" class="form-label"><b>ESTADO:</b></label>
